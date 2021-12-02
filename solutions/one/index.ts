@@ -45,5 +45,8 @@ function getIncreasedCount(arr: number[]): number {
 /**
  * Yes, I know you can write the second as a one liner, but look how hideous it would look
  *
- *
+ * const hardToReadSolutionNeverDoThisOMG = measurements
+ *   .slice(0, -1)
+ *   .map((_m, i) => measurements.slice(i, i + 3).reduce((prev, curr) => prev + curr))
+ *   .filter((curr, idx, arr) => curr > arr[idx - 1]).length;
  */
