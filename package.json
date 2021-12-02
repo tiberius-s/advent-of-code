@@ -11,6 +11,7 @@
     "node": ">=16"
   },
   "scripts": {
+    "clean": "rm -rf node_modules; rm package-lock.json && echo \nCleared project artifacts!\n",
     "start": "./cli.ts -- help"
   },
   "keywords": [
