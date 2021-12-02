@@ -1,4 +1,4 @@
-#!/usr/bin/env node --loader ts-node/esm --experimental-specifier-resolution=node
+#!/usr/bin/env node --loader ts-node/esm --experimental-specifier-resolution=node --no-warnings
 
 import { Command } from "commander";
 
