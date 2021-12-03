@@ -22,15 +22,16 @@ export function two(): void {
   const firstVoyage = { distance: 0, depth: 0 };
 
   movements.forEach((movement) => {
-    switch (movement[0]) {
+    const [dir, val] = movement;
+    switch (dir) {
       case Direction.FORWARD:
-        firstVoyage.distance = firstVoyage.distance + movement[1];
+        firstVoyage.distance += val;
         break;
       case Direction.UP:
-        firstVoyage.depth = firstVoyage.depth - movement[1];
+        firstVoyage.depth -= val;
         break;
       case Direction.DOWN:
-        firstVoyage.depth = firstVoyage.depth + movement[1];
+        firstVoyage.depth += val;
     }
   });
 
@@ -42,16 +43,17 @@ export function two(): void {
   const secondVoyage = { distance: 0, depth: 0, aim: 0 };
 
   movements.forEach((movement) => {
-    switch (movement[0]) {
+    const [dir, val] = movement;
+    switch (dir) {
       case Direction.FORWARD:
-        secondVoyage.distance = secondVoyage.distance + movement[1];
-        secondVoyage.depth = secondVoyage.depth + movement[1] * secondVoyage.aim;
+        secondVoyage.distance += val;
+        secondVoyage.depth += val * secondVoyage.aim;
         break;
       case Direction.UP:
-        secondVoyage.aim = secondVoyage.aim - movement[1];
+        secondVoyage.aim -= val;
         break;
       case Direction.DOWN:
-        secondVoyage.aim = secondVoyage.aim + movement[1];
+        secondVoyage.aim += val;
     }
   });
 
