@@ -1,8 +1,10 @@
 import { one } from "./one";
-export { one };
+import { two } from "./two";
+export { one, two };
 
 const solutions: Record<string, () => void> = {
-  one: one,
+  one,
+  two,
 };
 
 export default solutions;
