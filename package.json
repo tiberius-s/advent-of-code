@@ -12,7 +12,7 @@
   },
   "scripts": {
     "clean": "rm -rf node_modules; rm package-lock.json && echo \nCleared project artifacts!\n",
-    "start": "./cli.ts -- help"
+    "day": "node --loader ts-node/esm --experimental-specifier-resolution=node --no-warnings ./cli.ts -- day"
   },
   "keywords": [
     "advent of code"
