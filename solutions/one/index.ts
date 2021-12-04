@@ -1,15 +1,14 @@
-import { readFileSync } from "fs";
 import { URL } from "url";
+import { IO } from "../utils/io";
 
 type SlidingWindow = [number, number, number];
 
 export function one(): void {
   console.log("\nDAY 1: https://adventofcode.com/2021/day/1");
-  
-  const filepath = new URL("./input.txt", import.meta.url).pathname;
-  const measurements: number[] = readFileSync(filepath, { encoding: "utf-8" })
-    .split("\n")
-    .map((row) => parseInt(row, 10));
+
+  const filepath = new URL("./input.txt", import.meta.url);
+
+  const measurements = IO.parse<number>(filepath, (arr) => arr.map((row) => parseInt(row, 10)));
 
   // PART 1
   const increasedCount: number = getIncreasedCount(measurements);
