@@ -1,5 +1,6 @@
 import { readFileSync } from "fs";
 import { URL } from "url";
+import { IO } from "../utils/io";
 
 enum Direction {
   FORWARD = "forward",
@@ -12,11 +13,9 @@ type Movement = [Direction, number];
 export function two(): void {
   console.log("\nDAY 2: https://adventofcode.com/2021/day/2\n");
 
-  const filepath = new URL("./input.txt", import.meta.url).pathname;
-  const movements: Movement[] = readFileSync(filepath, { encoding: "utf-8" })
-    .split(/\n/)
-    .map((m) => m.split(/\s/))
-    .map((x) => [<Direction>x[0], parseInt(x[1])]);
+  const filepath = new URL("./input.txt", import.meta.url);
+
+  const movements = IO.parse<Movement>(filepath, toMovementArr);
 
   // PART 1
   const firstVoyage = { distance: 0, depth: 0 };
@@ -60,4 +59,10 @@ export function two(): void {
   const answerTwo = secondVoyage.depth * secondVoyage.distance;
 
   console.log(`Part 2 answer is ${answerTwo}`);
+
+  // UTILS
+
+  function toMovementArr(arr: string[]): Movement[] {
+    return arr.map((m) => m.split(/\s/)).map((x) => [<Direction>x[0], parseInt(x[1])]);
+  }
 }

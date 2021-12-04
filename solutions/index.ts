@@ -1,10 +1,12 @@
 import { one } from "./one";
 import { two } from "./two";
-export { one, two };
+import { three } from "./three";
+export { one, two, three };
 
 const solutions: Record<string, () => void> = {
   one,
   two,
+  three,
 };
 
 export default solutions;
