@@ -1,12 +1,16 @@
 import { one } from "./one";
 import { two } from "./two";
 import { three } from "./three";
-export { one, two, three };
+import { four } from "./four";
 
+export { one, two, three, four };
+
+// TODO: Use Map<string, () => void>> and add some other checks in main
 const solutions: Record<string, () => void> = {
   one,
   two,
   three,
+  four,
 };
 
 export default solutions;
