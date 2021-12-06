@@ -100,11 +100,8 @@ function markNumber(calledNumber: number, cards: BingoCard[]): BingoCard[] {
   return cards;
 }
 
-function checkForBingoWithSkips(card: BingoCard, cardIndex?: number, winningCards?: Map<number, number>) {
-  if (winningCards && cardIndex) {
-    return winningCards.has(cardIndex) ? true : checkForBingo(card);
-  }
-  return checkForBingo(card);
+function checkForBingoWithSkips(card: BingoCard, cardIndex: number, winningCards: Map<number, number>) {
+  return winningCards.has(cardIndex) ? true : checkForBingo(card);
 }
 
 function checkForBingo(card: BingoCard): boolean {
