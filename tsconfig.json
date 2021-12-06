@@ -4,10 +4,10 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "lib": ["ES2020"],
-    "esModuleInterop": true,
     "strict": true,
     "types": ["node", "commander"],
-    "sourceMap": true
+    "sourceMap": true,
+    "esModuleInterop": true
   },
   "ts-node": {
     "transpileOnly": true

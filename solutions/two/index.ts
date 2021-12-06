@@ -1,4 +1,3 @@
-import { readFileSync } from "fs";
 import { URL } from "url";
 import { IO } from "../utils/io";
 
@@ -59,10 +58,9 @@ export function two(): void {
   const answerTwo = secondVoyage.depth * secondVoyage.distance;
 
   console.log(`Part 2 answer is ${answerTwo}`);
+}
 
-  // UTILS
-
-  function toMovementArr(arr: string[]): Movement[] {
-    return arr.map((m) => m.split(/\s/)).map((x) => [<Direction>x[0], parseInt(x[1])]);
-  }
+// UTILS
+function toMovementArr(arr: string[]): Movement[] {
+  return arr.map((m) => m.split(/\s/)).map((x) => [<Direction>x[0], parseInt(x[1])]);
 }
