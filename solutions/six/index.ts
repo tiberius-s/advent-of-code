@@ -23,7 +23,7 @@ export function six(): void {
   console.log(`\nAnswer 1: ${fishCollection.length}`);
 
   // PART 2
-  const biggerFishCollection = input.map((f) => parseInt(f)).sort();
+  const biggerFishCollection = input.map((f) => parseInt(f));
   const fishGroupedByDay: number[] = Array(9).fill(0);
 
   biggerFishCollection.forEach((fish) => fishGroupedByDay[fish]++);
@@ -38,7 +38,3 @@ export function six(): void {
 
   console.log(`\nAnswer 2: ${answerTwo}`);
 }
-
-// UTILS
-// function
-six();
