@@ -1,5 +1,3 @@
-import { count } from "console";
-import { parse } from "path/posix";
 import { URL } from "url";
 import { IO } from "../utils/io";
 

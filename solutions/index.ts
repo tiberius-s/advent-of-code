@@ -3,8 +3,9 @@ import { two } from "./two";
 import { three } from "./three";
 import { four } from "./four";
 import { five } from "./five";
+import { six } from "./six";
 
-export { one, two, three, four, five };
+export { one, two, three, four, five, six };
 
 // TODO: Use Map<string, () => void>> and add some other checks in main
 const solutions: Record<string, () => void> = {
@@ -12,7 +13,8 @@ const solutions: Record<string, () => void> = {
   two,
   three,
   four,
-  five
+  five,
+  six,
 };
 
 export default solutions;
