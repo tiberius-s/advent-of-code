@@ -2,7 +2,7 @@ import { URL } from "url";
 import { IO } from "../utils/io";
 
 export function six(): void {
-  console.log("\nDAY 6: https://adventofcode.com/2021/day/5");
+  console.log("\nDAY 6: https://adventofcode.com/2021/day/6");
 
   const fileUrl = new URL("./input.txt", import.meta.url);
 

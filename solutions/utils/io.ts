@@ -12,8 +12,4 @@ export class IO {
     const input = this.parseInput(url);
     return transformFunc(input);
   }
-
-  // public static parseBingoInput(url: URL) {
-
-  // }
 }

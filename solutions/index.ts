@@ -4,10 +4,11 @@ import { three } from "./three";
 import { four } from "./four";
 import { five } from "./five";
 import { six } from "./six";
+import { seven } from "./seven";
 
-export { one, two, three, four, five, six };
+export { one, two, three, four, five, six, seven };
 
-// TODO: Use Map<string, () => void>> and add some other checks in main
+// TODO: Use Map<string, () => void>> and add some other validations in main cli script
 const solutions: Record<string, () => void> = {
   one,
   two,
@@ -15,6 +16,7 @@ const solutions: Record<string, () => void> = {
   four,
   five,
   six,
+  seven,
 };
 
 export default solutions;
